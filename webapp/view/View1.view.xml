@@ -1,0 +1,31 @@
+<mvc:View controllerName="danui5stand.ui5project.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:fb="sap.ui.comp.filterbar"
+    >
+    <App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					
+                    <f:DynamicPageHeader pinnable="true">
+                        <f:content>
+                            <fb:FilterBar class="sapUiTinyMargin" useToolbar="false" reset="onReset" search="onSearch" showFilterConfiguration="false" filtersDialogClosed = "onFiltersDialogClosed" showRestoreButton="true">
+                                <fb:filterGroupItems>
+                                    <fb:FilterGroupItem groupName="DC" name="Site" label="{i18n>site}" visibleInFilterBar="true" mandatory="true">
+                                        <fb:control>
+                                            <MultiInput id="idSite" valueHelpOnly="true" valueHelpRequest="onStoreIdVHReq" tokenUpdate="setBlurOnTable" width="1rem"></MultiInput>
+                                        </fb:control>
+                                    </fb:FilterGroupItem>
+                                   
+                                </fb:filterGroupItems>
+                            </fb:FilterBar>
+                        </f:content>
+                    </f:DynamicPageHeader>
+                
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
